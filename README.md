@@ -282,11 +282,3 @@ In your `pom.xml`, add the following dependency:
 </dependencies>
 ```
 
-## License
-
-Include the appropriate license information for your SDK.
-
----
-
-This README should provide a solid foundation for developers using your SDK, guiding them through installation, setup, and usage.
-
