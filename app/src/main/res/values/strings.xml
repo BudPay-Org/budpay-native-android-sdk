@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">budpay-android-sdk</string>
+    <string-array name="currency_array">
+        <item>NGN</item>
+        <item>USD</item>
+        <item>GHS</item>
+        <item>EUR</item>
+    </string-array>
+
+</resources>
