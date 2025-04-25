@@ -18,6 +18,13 @@ The SDK supports the initialization of transactions, payment verification via We
 Add the SDK module to your Android project:
 - Import the `budpay_android_sdk` module into your project, or include it as a dependency in your `build.gradle` file.
 
+Add the following permissions to your `AndroidManifest.xml`:
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
 Depending on your build system, you can add the JitPack repository to your project using any of these options:
 
 ### Option 1: For Gradle (Groovy)
@@ -60,16 +67,21 @@ In your `pom.xml`, add the following repository:
     </repository>
 </repositories>
 ```
-Add the following permissions to your `AndroidManifest.xml`:
 
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-```
 
 ## Step 2: Add dependencies
 
-Once the JitPack repository is added, you can now include the BudPay Android SDK dependency in your project.
+Make sure to add the following dependencies to your `build.gradle` file:
+
+```gradle
+dependencies {
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1' // For making network requests
+    implementation 'androidx.appcompat:appcompat:1.3.1' // For AppCompatActivity support
+    // Add other necessary dependencies
+}
+```
+
+After adding the Jitpack repository, you can now include the BudPay Android SDK dependency in your project.
 
 ### Option 1: For Gradle
 
@@ -95,15 +107,6 @@ In your `pom.xml`, add the following dependency:
 </dependencies>
 ```
 
-Make sure to add the following dependencies to your `build.gradle` file:
-
-```gradle
-dependencies {
-    implementation 'com.squareup.okhttp3:okhttp:4.9.1' // For making network requests
-    implementation 'androidx.appcompat:appcompat:1.3.1' // For AppCompatActivity support
-    // Add other necessary dependencies
-}
-```
 
 ## Step 3: Set up the SDK
 
