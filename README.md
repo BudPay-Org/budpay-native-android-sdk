@@ -18,7 +18,48 @@ The SDK supports the initialization of transactions, payment verification via We
 Add the SDK module to your Android project:
 - Import the `budpay_android_sdk` module into your project, or include it as a dependency in your `build.gradle` file.
 
+Depending on your build system, you can add the JitPack repository to your project using any of these options:
 
+### Option 1: For Gradle (Groovy)
+
+Add the following to your `settings.gradle` file:
+
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+### Option 2: For Gradle (Kotlin DSL)
+
+Add the following to your `settings.gradle.kts` file:
+
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven("https://jitpack.io")
+    }
+}
+```
+
+### Option 3: For Maven
+
+In your `pom.xml`, add the following repository:
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
 Add the following permissions to your `AndroidManifest.xml`:
 
 ```xml
@@ -28,7 +69,33 @@ Add the following permissions to your `AndroidManifest.xml`:
 
 ## Step 2: Add dependencies
 
-Make sure the following dependencies are added in your `build.gradle` file:
+Once the JitPack repository is added, you can now include the BudPay Android SDK dependency in your project.
+
+### Option 1: For Gradle
+
+In your `build.gradle` file, add the following dependency:
+
+```gradle
+dependencies {
+    implementation 'com.github.BudPay-Org:budpay-native-android-v1.0.0'
+}
+```
+
+### Option 2: For Maven
+
+In your `pom.xml`, add the following dependency:
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>com.github.BudPay-Org</groupId>
+        <artifactId>budpay-native-android-v1.0.0</artifactId>
+        <version>v1.0.0</version>
+    </dependency>
+</dependencies>
+```
+
+Make sure to add the following dependencies to your `build.gradle` file:
 
 ```gradle
 dependencies {
@@ -211,74 +278,5 @@ class FailedActivity : AppCompatActivity() {
 
 ### Step 1: Add the JitPack Repository to Your Build File
 
-In order to use the BudPay Android SDK, you'll need to add the JitPack repository to your project. Follow the steps below based on your build system.
 
-#### For Gradle (Groovy)
-
-Add the following to your `settings.gradle` file:
-
-```gradle
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-    }
-}
-```
-
-## For Gradle (Kotlin DSL)
-
-Add the following to your `settings.gradle.kts` file:
-
-```kotlin
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        mavenCentral()
-        maven("https://jitpack.io")
-    }
-}
-```
-
-## For Maven
-
-In your `pom.xml`, add the following repository:
-
-```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-```
-
-## Step 2: Add the Dependency
-
-Once the JitPack repository is added, you can now include the BudPay Android SDK dependency in your project.
-
-### For Gradle
-
-In your `build.gradle` file, add the following dependency:
-
-```gradle
-dependencies {
-    implementation 'com.github.BudPay-Org:budpay-native-android-v1.0.0'
-}
-```
-
-### For Maven
-
-In your `pom.xml`, add the following dependency:
-
-```xml
-<dependencies>
-    <dependency>
-        <groupId>com.github.BudPay-Org</groupId>
-        <artifactId>budpay-native-android-v1.0.0</artifactId>
-        <version>v1.0.0</version>
-    </dependency>
-</dependencies>
-```
 
