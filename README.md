@@ -60,7 +60,7 @@ To start a payment transaction, use `MainActivity` to trigger the payment flow.
 
 ```kotlin
 val email = "customer@example.com"
-val amount = "10000"  // Amount in NGN
+val amount = "10000"
 val currency = "NGN"
 val apiKey = "your_budpay_api_key"
 val successActivity = "com.example.budpay_sdk.SuccessActivity"
@@ -264,7 +264,7 @@ In your `build.gradle` file, add the following dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.BudPay-Org:budpay-native-android-v1.0.0-dev'
+    implementation 'com.github.BudPay-Org:budpay-native-android-v1.0.0'
 }
 ```
 
@@ -276,8 +276,8 @@ In your `pom.xml`, add the following dependency:
 <dependencies>
     <dependency>
         <groupId>com.github.BudPay-Org</groupId>
-        <artifactId>budpay-native-android-v1.0.0-dev</artifactId>
-        <version>v1.0.0-dev</version>
+        <artifactId>budpay-native-android-v1.0.0</artifactId>
+        <version>v1.0.0</version>
     </dependency>
 </dependencies>
 ```
