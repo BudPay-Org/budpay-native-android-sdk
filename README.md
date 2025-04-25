@@ -277,9 +277,4 @@ class FailedActivity : AppCompatActivity() {
 }
 ```
 
-## How to Integrate BudPay Android SDK Using JitPack
-
-### Step 1: Add the JitPack Repository to Your Build File
-
-
 
